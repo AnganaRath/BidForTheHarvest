@@ -1,0 +1,29 @@
+<!-- src/app/product-list/product-list.component.html -->
+<div *ngIf="products.length > 0; else noProducts" class="container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p><strong>Price: </strong>{{ product.price | currency:'Rs.' }}</p>
+          <p><strong>Current Bid: </strong>{{ product.currentBid | currency:'Rs.' }}</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Rs.</span>
+            </div>
+            <input type="number" class="form-control" [(ngModel)]="newBids[product.id]" placeholder="Enter your bid" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" (click)="placeBid(product.id)">Place Bid</button>
+            </div>
+          </div>
+          <p *ngIf="newBids[product.id]"><strong>Your Bid: </strong>{{ newBids[product.id] | currency:'Rs.' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noProducts>
+  <p class="text-center">No products available.</p>
+</ng-template>
