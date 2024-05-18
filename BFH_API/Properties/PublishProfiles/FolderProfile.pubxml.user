@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Demo\APIPublish</_PublishTargetUrl>
+    <History>True|2022-03-10T08:03:22.3846318Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Properties/DataSources/CECBERP.CMN.Business.Entities.SP.SubprojectProgressQuarterlyReportDTO.datasource">
+      <publishTime>03/08/2022 14:42:48</publishTime>
+    </File>
+    <File Include="Properties/DataSources/CECBERP.CMN.Business.Entities.SP.SubprojectWorkVsFinancialPhysicalProgressReportDTO.datasource">
+      <publishTime>03/10/2022 11:21:36</publishTime>
+    </File>
+    <File Include="Properties/DataSources/CECBERP.CMN.Business.Entities.SP.SubprojectWorkVsIncomeReportDTO.datasource">
+      <publishTime>03/10/2022 12:25:56</publishTime>
+    </File>
+    <File Include="wwwroot/Reports/HWSubprojectExternalInvoices.rdlc">
+      <publishTime>04/25/2023 11:53:15</publishTime>
+    </File>
+    <File Include="wwwroot/Reports/SubprojectWorkVsFinancialAndPhysicalProgressReport.rdlc">
+      <publishTime>03/10/2022 15:29:34</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
