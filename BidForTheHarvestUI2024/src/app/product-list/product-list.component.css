@@ -1,0 +1,84 @@
+/* src/app/product-list/product-list.component.css */
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 20px); /* Two items per row, adjust gap accordingly */
+    box-sizing: border-box;
+  }
+  
+  .product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .product-item div {
+    flex: 1;
+  }
+  
+  .bid-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .currency-symbol {
+    margin-right: 5px;
+    font-size: 1em;
+  }
+  
+  .bid-input-container input {
+    margin-right: 10px;
+    flex: 1;
+  }
+  
+  .bid-input-container button {
+    margin-top: 10px;
+  }
+  
+  /* src/app/product-list/product-list.component.css */
+  .product-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .bid-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* src/app/product-list/product-list.component.css */
+  .card {
+    height: 100%; /* Ensure cards take full height of their container */
+  }
+  
+  .card-body {
+    /* Set max height and overflow for the card body */
+    max-height: 300px; /* Adjust this value as needed */
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    /* Ensure the image fits within the card body */
+    max-height: 150px; /* Adjust this value as needed */
+    object-fit: contain; /* Preserve aspect ratio of the image */
+  }
+  

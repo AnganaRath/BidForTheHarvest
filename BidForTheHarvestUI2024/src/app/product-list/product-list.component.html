@@ -1,0 +1,31 @@
+<div *ngIf="products.length > 0; else noProducts" class="container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="product.productImageId" alt="{{ product.productName }}" class="card-img-top" (error)="onImageError($event)">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">{{ product.productdescription }}</p>
+          <p><strong>Price: </strong>{{ product.productPrice | currency:'Rs.' }}</p>
+          <p><strong>Current Bid: </strong>{{ product.currentBid | currency:'Rs.' }}</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Rs.</span>
+            </div>
+            <input type="number" class="form-control" [(ngModel)]="newBids[product.productId]" placeholder="Enter your bid" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" (click)="placeBid(product.productId,product.userId)">Place Bid</button>
+            </div>
+          </div>
+          <p *ngIf="newBids[product.productId]"><strong>Your Bid: </strong>{{ newBids[product.productId] | currency:'Rs.' }}</p>
+          <div class="input-group-append">
+            <button class="btn btn-primary" (click)="placeBid(product.productId)">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noProducts>
+  <p class="text-center">No products available.</p>
+</ng-template>

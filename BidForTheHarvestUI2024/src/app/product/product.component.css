@@ -1,0 +1,9 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.img-thumbnail {
+  display: block;
+  margin-top: 10px;
+}

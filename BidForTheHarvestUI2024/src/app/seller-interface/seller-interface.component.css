@@ -1,0 +1,14 @@
+/* product-form.component.css */
+.container {
+    max-width: 600px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .img-thumbnail {
+    display: block;
+    margin: 0 auto;
+  }
+  

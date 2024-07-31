@@ -1,0 +1,38 @@
+<div class="register-container">
+  <form (ngSubmit)="onSubmit()" style="width: 500px; height: 500px;">
+    <h1 style="color: darkolivegreen;">BID FOR THE HARVEST</h1>
+    <h2>Register</h2>
+    <div class="scrollable-container">
+      <input hidden ="text" class="form-control" id="UserId" [(ngModel)]="user.UserId" name="UserId">
+      <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="userPhoneNumber" [(ngModel)]="user.userPhoneNumber" name="userPhoneNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="userType" class="form-label">User Type</label>
+        <select class="form-control" id="userType" [(ngModel)]="user.userType" name="userType" required>
+          <option value="">Select User Type</option>
+          <option value="1">Seller</option>
+          <option value="2">Buyer</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" #productForm="ngForm" class="container mt-5">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="ProductName" [(ngModel)]="product.ProductName" name="ProductName" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="ProductPrice" [(ngModel)]="product.ProductPrice" name="ProductPrice" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="Productdescription" [(ngModel)]="product.Productdescription" name="Productdescription" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Image:</label>
+    <input type="file" id="image" (change)="onFileSelected($event)" class="form-control-file" required>
+    <img *ngIf="imagePreview" [src]="imagePreview" alt="Image Preview" class="img-thumbnail mt-3" style="max-width: 200px;">
+  </div>
+<div></div>
+  <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
